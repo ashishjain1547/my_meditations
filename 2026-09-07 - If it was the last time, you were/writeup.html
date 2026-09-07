@@ -1,0 +1,221 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/bookSummariesAndReviews/main/links_to_book_clubs.json",
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['current book club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span>
+                            <span class="customLink"><i class="fa fa-whatsapp"></i> Whatsapp </span>
+                            </a>
+                        </h2>
+                        `
+                    );
+                }
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .customLink:hover {
+            text-decoration: none;
+        }
+
+        div.code-block-decoration.footer {
+            display: none;
+        }
+
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+
+        .custom_link_h2 a:active {
+            color: black;
+        }
+
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+
+        .customul {
+            list-style: none;
+        }
+
+        [aria-hidden='true'] {
+            display: none;
+        }
+    </style>
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+            font-size: 17px;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+
+        .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        .custom_iframe {
+            width: 100%;
+            height: 305px;
+        }
+
+    </style>
+</head>
+<div id="customWhatsAppGroupLinkWrapper"></div>
+
+<br>
+<a class="customLink" href="https://survival8.blogspot.com/2025/11/my-meditations.html" target="_blank">My Meditations</a> 
+&nbsp;&nbsp; 
+<a href="https://survival8.blogspot.com/2026/08/todo-2026-aug-13-8am.html" target="_blank" class="customLink">&laquo; Previously</a> 
+<!-- &nbsp;&nbsp; 
+<a href="" target="_blank" class="customLink">Next &raquo;</a> -->
+<br>
+
+<style>
+    pre { white-space: pre-wrap; }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<div style="text-align:center; margin:20px 0;">
+  <button id="langToggle" style="width:100%; display:flex; align-items:stretch; background-color:#1e88e5; color:#fff; border:none; border-radius:22px; padding:0; overflow:hidden; font-size:16px; font-weight:bold; cursor:pointer; box-shadow:0 2px 6px rgba(30,136,229,.4);">
+    <span id="langHi" style="flex:1; display:flex; align-items:center; justify-content:center; padding:12px 0;">हिंदी</span>
+    <span style="opacity:.55; display:flex; align-items:center;">|</span>
+    <span id="langEn" style="flex:1; display:flex; align-items:center; justify-content:center; padding:12px 0;">English</span>
+  </button>
+</div>
+
+<script>
+$(function(){
+  function applyLang(lang){
+    if(lang === 'hi'){
+      $('.customPreEnglish').hide();
+      $('.customPreHindi').show();
+      $('#langHi').css({backgroundColor:'#90caf9', color:'#1e88e5'});
+      $('#langEn').css({backgroundColor:'transparent', color:'#fff'});
+    } else {
+      $('.customPreHindi').hide();
+      $('.customPreEnglish').show();
+      $('#langEn').css({backgroundColor:'#90caf9', color:'#1e88e5'});
+      $('#langHi').css({backgroundColor:'transparent', color:'#fff'});
+    }
+  }
+  applyLang('hi'); // default: Hindi view
+  $('#langToggle').on('click', function(){
+    applyLang($('.customPreEnglish').is(':visible') ? 'hi' : 'en');
+  });
+});
+</script>
+
+<pre class="customPreHindi">
+<div class="outline-none data-[writing-block-fullscreen-editor]:min-h-[75vh] ProseMirror markdown prose dark:prose-invert w-full min-h-6 break-words focus:outline-none" data-writing-block-fullscreen-editor-region="true" data-writing-block-fullscreen-editor-layout="inline" contenteditable="true" aria-disabled="false" dir="auto" translate="no"><h1><strong><span>“अगर यह आख़िरी बार होता, जब आप…”</span></strong></h1><p><span>Steve Jobs अपने आप से एक सवाल पूछा करते थे, जो उन्हें उस दिन किए जाने वाले काम पर पूरी तरह केंद्रित कर देता था।</span></p><p><span>वह सवाल था—</span></p><p><strong><span>“अगर आज पृथ्वी पर मेरा आख़िरी दिन हो, तो मैं क्या करूँगा?”</span></strong></p><p><span>कई दिनों, हफ्तों और महीनों तक इस सवाल पर विचार करते-करते मेरे मन में एक दूसरा सवाल आया।</span></p><p><span>यह सवाल भी उतना ही शक्तिशाली है, लेकिन यह दृष्टिकोण को </span><strong><span>“क्या करना है” से बदलकर “कैसे करना है”</span></strong><span> पर ले जाता है।</span></p><p><span>यह सवाल आपको अगला महत्वपूर्ण काम खोजने के लिए प्रेरित नहीं करता, बल्कि यह याद दिलाता है कि—</span></p><p><strong><span>आप जो भी कर रहे हैं, जहाँ भी कर रहे हैं और जैसे भी कर रहे हैं—उसे पूरे मन से कीजिए।</span></strong></p><p><span>वह सवाल है—</span></p><h1><strong><span>“अगर यह आख़िरी बार होता, जब आप…?”</span></strong></h1><p><span>और इस वाक्य को आप लगभग किसी भी काम के साथ पूरा कर सकते हैं।</span></p><ul data-spread="true"><li><p dir="auto"><strong><span>अगर यह आख़िरी बार होता, जब आप अपने दोस्त से बात कर रहे होते?</span></strong></p></li><li><p dir="auto"><strong><span>अगर यह आख़िरी बार होता, जब आप एक कप चाय पी रहे होते?</span></strong></p></li><li><p dir="auto"><strong><span>अगर यह आख़िरी बार होता, जब आप कोई किताब पढ़ रहे होते?</span></strong></p></li><li><p dir="auto"><strong><span>अगर यह आख़िरी बार होता, जब आप नहा रहे होते?</span></strong></p></li><li><p dir="auto"><strong><span>अगर यह आख़िरी बार होता, जब आप अपना भोजन कर रहे होते?</span></strong></p></li><li><p dir="auto"><strong><span>अगर यह आख़िरी बार होता, जब आप वह संगीत सुन रहे होते?</span></strong></p></li><li><p dir="auto"><strong><span>अगर यह आपका आख़िरी ध्यान होता?</span></strong></p></li><li><p dir="auto"><strong><span>अगर यह आपकी मंदिर की आख़िरी यात्रा होती?</span></strong></p></li><li><p dir="auto"><strong><span>अगर यह आख़िरी बार होता, जब आप कुछ लिख रहे होते?</span></strong></p></li></ul><p><span>इन सवालों का जादू यह है कि ये आपका ध्यान </span><strong><span>जल्दबाज़ी और तात्कालिकता से हटाकर संतोष और पूर्णता की ओर ले जाते हैं।</span></strong></p><p><span>जब आपको सच में यह एहसास होता है कि </span><strong><span>हर चीज़ अस्थायी है</span></strong><span>, तो जीवन के छोटे-छोटे सुख, जिन्हें हम अक्सर नज़रअंदाज़ कर देते हैं, अचानक बहुत मूल्यवान लगने लगते हैं।</span></p><p><span>एक कप चाय सिर्फ चाय नहीं रह जाती।</span></p><p><span>किसी दोस्त से हुई बातचीत सिर्फ बातचीत नहीं रह जाती।</span></p><p><span>किसी प्रिय गीत को सुनना सिर्फ संगीत सुनना नहीं रह जाता।</span></p><p><span>आप उन क्षणों में </span><strong><span>पूरी तरह उपस्थित</span></strong><span> हो जाते हैं।</span></p><p><span>आप उन्हें जल्दी-जल्दी ख़त्म करने के बजाय </span><strong><span>जीने लगते हैं।</span></strong></p><h3><strong><span>अंत में…</span></strong></h3><p><span>ज़िंदगी का मतलब हमेशा यह नहीं होता कि आप अपने समय से </span><strong><span>सबसे ज़्यादा काम कैसे निकाल सकते हैं।</span></strong></p><p><span>कभी-कभी ज़िंदगी का मतलब बस इतना होता है कि—</span></p><p><strong><span>जो कुछ अभी आपके सामने है, उसे पूरी तरह जिएँ।</span></strong></p><p><strong><span>यहीं।</span></strong></p><p><strong><span>अभी।</span></strong></p><p><strong><span>पूरे मन से।</span></strong></p><p><span>क्योंकि हो सकता है…</span></p><p><strong><span>यह आख़िरी बार हो।</span></strong></p></div>
+</pre>
+
+
+<pre class="customPreEnglish">
+<div class="outline-none data-[writing-block-fullscreen-editor]:min-h-[75vh] ProseMirror markdown prose dark:prose-invert w-full min-h-6 break-words focus:outline-none" data-writing-block-fullscreen-editor-region="true" data-writing-block-fullscreen-editor-layout="inline" contenteditable="true" aria-disabled="false" dir="auto" translate="no"><h1><strong><span>“What If It Were the Last Time You…”</span></strong></h1><p><span>Steve Jobs used to ask himself a question that helped him focus completely on what he had to do that day.</span></p><p><span>The question was:</span></p><p><strong><span>“If today were my last day on Earth, what would I do?”</span></strong></p><p><span>As I reflected on this question for days, weeks, and months, another question came to my mind.</span></p><p><span>This question is just as powerful, but it shifts the perspective from </span><strong><span>“what to do” to “how to do it.”</span></strong></p><p><span>It does not ask you to search for the next meaningful thing to do. Instead, it reminds you:</span></p><p><strong><span>Whatever you are doing, wherever you are doing it, and however you are doing it—do it wholeheartedly.</span></strong></p><p><span>The question is:</span></p><h1><strong><span>“What if it were the last time you…?”</span></strong></h1><p><span>And you can complete this sentence with almost anything.</span></p><ul data-spread="true"><li><p dir="auto"><strong><span>What if it were the last time you were talking to your friend?</span></strong></p></li><li><p dir="auto"><strong><span>What if it were the last time you were drinking a cup of tea?</span></strong></p></li><li><p dir="auto"><strong><span>What if it were the last time you were reading a book?</span></strong></p></li><li><p dir="auto"><strong><span>What if it were the last time you were taking a shower?</span></strong></p></li><li><p dir="auto"><strong><span>What if it were the last time you were having your meal?</span></strong></p></li><li><p dir="auto"><strong><span>What if it were the last time you were listening to that song?</span></strong></p></li><li><p dir="auto"><strong><span>What if it were your last meditation?</span></strong></p></li><li><p dir="auto"><strong><span>What if it were your last visit to the temple?</span></strong></p></li><li><p dir="auto"><strong><span>What if it were the last time you were writing?</span></strong></p></li></ul><p><span>The power of these questions is that they shift your attention </span><strong><span>from urgency and haste to satisfaction and fulfillment.</span></strong></p><p><span>When you truly realize that </span><strong><span>everything is temporary</span></strong><span>, the little pleasures of life—things we so often overlook—suddenly begin to feel incredibly valuable.</span></p><p><span>A cup of tea is no longer just a cup of tea.</span></p><p><span>A conversation with a friend is no longer just a conversation.</span></p><p><span>Listening to a favorite song is no longer just listening to music.</span></p><p><span>You become </span><strong><span>fully present</span></strong><span> in those moments.</span></p><p><span>Instead of rushing through them, </span><strong><span>you begin to live them.</span></strong></p><h3><strong><span>In the end…</span></strong></h3><p><span>Life is not always about getting </span><strong><span>the most work out of your time.</span></strong></p><p><span>Sometimes, life is simply about </span><strong><span>fully experiencing whatever is in front of you.</span></strong></p><p><strong><span>Right here.</span></strong></p><p><strong><span>Right now.</span></strong></p><p><strong><span>With your whole heart.</span></strong></p><p><span>Because it might be…</span></p><p><strong><span>the last time.</span></strong></p></div>
+</pre>
+
+
+<br>
+<a class="customLink" href="https://survival8.blogspot.com/2025/11/my-meditations.html" target="_blank">My Meditations</a> 
+&nbsp;&nbsp; 
+<a href="https://survival8.blogspot.com/2026/08/todo-2026-aug-13-8am.html" target="_blank" class="customLink">&laquo; Previously</a> 
+<!-- &nbsp;&nbsp; 
+<a href="" target="_blank" class="customLink">Next &raquo;</a> -->
+<br>
